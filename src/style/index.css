@@ -11,4 +11,5 @@ body {
   box-sizing: border-box;
   background-color: #38404B;
   font-family: 'Ubuntu', sans-serif;
+  /* width: 100%; */
 }
