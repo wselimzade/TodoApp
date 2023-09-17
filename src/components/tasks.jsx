@@ -1,25 +1,20 @@
 import { GoDot } from 'react-icons/go'
+import { MdDeleteSweep } from "react-icons/md"
 import "../style/tasks.css"
 
-export default function Tasks() {
+export default function Tasks({ tasks, deleteTask }) {
     return (
         <div className="tasks">
-            <div className='task'>
-                <GoDot className='dot' />
-                <span className='task-text'> Go Shopping </span>
-            </div>
-            <div className='task'>
-                <GoDot className='dot' />
-                <span className='task-text'> Go Shopping </span>
-            </div>
-            <div className='task'>
-                <GoDot className='dot' />
-                <span className='task-text'> Go Shopping </span>
-            </div>
-            <div className='task'>
-                <GoDot className='dot' />
-                <span className='task-text'> Go Shopping </span>
-            </div>
+            {tasks.map((task, index) => (
+                <div className='task'>
+                    <div className='task-main'>
+                        <GoDot className='dot' />
+                        <span className='task-text'> {task} </span>
+                    </div>
+
+                    <MdDeleteSweep className='delete' onClick={() => deleteTask(index)} />
+                </div>
+            ))}
         </div>
     )
 }
