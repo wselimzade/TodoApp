@@ -1,6 +1,8 @@
 program link: https://wselimzade.github.io/myTasks/
+
 This web application is designed for you to save your tasks in a simple way.
-The design of the program was developed based on the example developed by the user named Alisa Musayev on the Figma platform, with additions made to it.
+The design of the program was developed based on the example developed by the user named 
+Alisa Musayev on the Figma platform, with additions made to it.
 https://www.figma.com/community/file/1092760851744337591
 
 # Getting Started with Create React App
