@@ -39,6 +39,14 @@
     font-size: 2.2rem;
 }
 
+.dot:hover {
+    color: #d4ff6fb2;
+}
+
 .delete {
     font-size: 2.2rem;
+}
+
+.delete:hover {
+    color: #d4ff6fb2;
 }

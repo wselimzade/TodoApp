@@ -3,25 +3,22 @@ import "../style/completed.css"
 import { GoDotFill } from "react-icons/go"
 
 export default function Completed({ completedTasks, returnTask, deleteCompletedTask }) {
+    console.log(completedTasks)
     return (
         <div className="completed">
-            {completedTasks.map((completedTask, index) => (
-                <>
-                    <div className="completed-title"> Completed </div>
-                    <div className="completed-tasks">
-
-                        <div className='completed-task' key={index}>
-                            <div className="completed-task-main" onClick={() => returnTask(completedTask, index)}>
-                                <GoDotFill className='dot' />
-                                <span className="completed-task-text"> {completedTask} </span>
-                            </div>
-
-                            <MdDeleteSweep className="delete" onClick={() => deleteCompletedTask(index)} />
+            {completedTasks.length > 0 && <div className="completed-title"> Completed </div>}
+            <div className="completed-tasks">
+                {completedTasks.map((completedTask, index) => (
+                    <div className='completed-task' key={index}>
+                        <div className="completed-task-main" onClick={() => returnTask(completedTask, index)}>
+                            <GoDotFill className='dot' />
+                            <span className="completed-task-text"> {completedTask} </span>
                         </div>
 
+                        <MdDeleteSweep className="delete" onClick={() => deleteCompletedTask(index)} />
                     </div>
-                </>
-            ))}
+                ))}
+            </div>
         </div>
     )
 }

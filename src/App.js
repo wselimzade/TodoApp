@@ -7,8 +7,10 @@ import { useState } from "react";
 
 function App() {
 
-  const [tasks, setTasks] = useState([]);
-  const [completedTasks, setCompletedTasks] = useState([])
+  const [tasks, setTasks] = useState([
+    'Go shopping', 'Short  exercise', 'Meditation'
+  ]);
+  const [completedTasks, setCompletedTasks] = useState(['Reading'])
 
   const addTask = (newTask) => {
     setTasks([...tasks, newTask])
@@ -33,8 +35,6 @@ function App() {
     setTasks([...tasks, returnTask])
     deleteCompletedTask(index)
   }
-
-  console.log(tasks)
 
   return (
     <div className="App">
