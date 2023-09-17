@@ -1,7 +1,7 @@
 .App {
   width: 90%;
-  margin: 0 auto;
-  margin-top: 1.6rem;
+  margin: 1.6rem auto;
+  /* margin-top: 1.6rem; */
   /* text-align: center; */
   /* border: 1px solid #000; */
 }

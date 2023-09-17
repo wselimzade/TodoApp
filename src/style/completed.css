@@ -26,10 +26,11 @@
     width: 35rem;
     padding: 1.9rem;
     flex-shrink: 0;
-    border-radius: 16px;
+    border-radius: 1.6rem;
     background: #38404B;
     box-shadow: 5px 5px 13px 0px rgba(48, 54, 64, 0.90) inset, -5px -5px 10px 0px rgba(64, 74, 86, 0.90) inset, 5px -5px 10px 0px rgba(48, 54, 64, 0.20) inset, -5px 5px 10px 0px rgba(48, 54, 64, 0.20) inset, -1px -1px 2px 0px rgba(48, 54, 64, 0.50), 1px 1px 2px 0px rgba(64, 74, 86, 0.30);
     color: #94ADCF;
+    cursor: pointer;
 }
 
 .completed-task-text {
