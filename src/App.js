@@ -1,13 +1,13 @@
-import SearchBar from "./components/searchBar";
-import Tasks from "./components/tasks";
-import Completed from "./components/completed";
+import AddBar from "./components/AddBar";
+import Tasks from "./components/Tasks";
+import Completed from "./components/Completed";
 
 import "./style/App.css"
 
 function App() {
   return (
     <div className="App">
-      <SearchBar />
+      <AddBar />
       <Tasks />
       <Completed />
     </div>
