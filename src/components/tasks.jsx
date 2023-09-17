@@ -12,7 +12,7 @@ export default function Tasks({ tasks, deleteTask, addCompletedTask }) {
                         <span className='task-text'> {task} </span>
                     </div>
 
-                    <MdDeleteSweep className='delete' onClick={() => deleteTask(index)} />
+                    <MdDeleteSweep className='delete' onClick={() => {deleteTask(index)}} />
                 </div>
             ))}
         </div>

@@ -3,7 +3,6 @@ import "../style/completed.css"
 import { GoDotFill } from "react-icons/go"
 
 export default function Completed({ completedTasks, returnTask, deleteCompletedTask }) {
-    console.log(completedTasks)
     return (
         <div className="completed">
             {completedTasks.length > 0 && <div className="completed-title"> Completed </div>}

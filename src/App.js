@@ -4,6 +4,7 @@ import Completed from "./components/Completed";
 
 import "./style/App.css"
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 
 function App() {
 
@@ -19,25 +20,52 @@ function App() {
   const deleteTask = (currentTaskIndex) => {
     let updateArr = tasks.filter((item, index) => index !== currentTaskIndex)
     setTasks(updateArr)
+    toast.error(("Task deleted!"), {
+      theme: "colored",
+      autoClose: 500
+    })
+  }
+
+  const deleteTaskForCompleted = (currentTaskIndex) => {
+    let updateArr = tasks.filter((item, index) => index !== currentTaskIndex)
+    setTasks(updateArr)
   }
 
   const deleteCompletedTask = (currentCompletedTaskIndex) => {
     let updateArr = completedTasks.filter((item, index) => index !== currentCompletedTaskIndex)
     setCompletedTasks(updateArr)
+    toast.error(("Task deleted!"), {
+      theme: "colored",
+      autoClose: 500
+    })
+  }
+
+  const deleteCompletedTaskForUncompleted = (currentCompletedTaskIndex) => {
+    let updateArr = completedTasks.filter((item, index) => index !== currentCompletedTaskIndex)
+    setCompletedTasks(updateArr)
   }
 
   const addCompletedTask = (newCompletedTask, index) => {
+    deleteTaskForCompleted(index)
     setCompletedTasks([...completedTasks, newCompletedTask])
-    deleteTask(index)
+    toast.success(("Task completed!"), {
+      theme: 'colored',
+      autoClose: 500
+    })
   }
 
   const returnTask = (returnTask, index) => {
+    deleteCompletedTaskForUncompleted(index)
     setTasks([...tasks, returnTask])
-    deleteCompletedTask(index)
+    toast.warning(("Task uncompleted!"), {
+      theme: 'colored',
+      autoClose: 500
+    })
   }
 
   return (
     <div className="App">
+      <ToastContainer style={{ fontSize: '1.2rem' }} />
       <AddBar addTask={addTask} />
       <Tasks tasks={tasks} deleteTask={deleteTask} addCompletedTask={addCompletedTask} />
       <Completed deleteTask={deleteTask} completedTasks={completedTasks} returnTask={returnTask} deleteCompletedTask={deleteCompletedTask} />
