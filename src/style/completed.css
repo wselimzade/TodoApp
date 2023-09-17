@@ -1,0 +1,47 @@
+.completed {
+    margin-top: 4rem;
+}
+
+.completed-title {
+    color: #94ADCF;
+    font-family: Ubuntu;
+    font-size: 2.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 4rem;
+}
+
+.completed-tasks {
+    display: flex;
+    /* justify-content: center; */
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.completed-task {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    width: 35rem;
+    padding: 1.9rem;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: #38404B;
+    box-shadow: 5px 5px 13px 0px rgba(48, 54, 64, 0.90) inset, -5px -5px 10px 0px rgba(64, 74, 86, 0.90) inset, 5px -5px 10px 0px rgba(48, 54, 64, 0.20) inset, -5px 5px 10px 0px rgba(48, 54, 64, 0.20) inset, -1px -1px 2px 0px rgba(48, 54, 64, 0.50), 1px 1px 2px 0px rgba(64, 74, 86, 0.30);
+    color: #94ADCF;
+}
+
+.completed-task-text {
+    font-family: Ubuntu;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration-line: line-through;
+}
+
+.dot {
+    margin-right: 2.5rem;
+    font-size: 2.2rem;
+}
